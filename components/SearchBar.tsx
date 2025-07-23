@@ -1,5 +1,4 @@
 import { icons } from "@/constants/icons";
-import { useRouter } from "expo-router";
 import React from "react";
 import { Image, StyleSheet, TextInput, View } from "react-native";
 
@@ -9,7 +8,6 @@ interface SearchBarProps {
 }
 
 const SearchBar = ({ onPress, placeholder }: SearchBarProps) => {
-  const router = useRouter();
   return (
     <View className="flex-row items-center justify-between bg-dark-200 p-3 rounded-full px-5 py-4">
       <Image
