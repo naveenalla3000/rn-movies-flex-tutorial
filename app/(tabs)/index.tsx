@@ -23,7 +23,7 @@ export default function Index() {
     loading: moviesLoading,
     refetch,
     reset,
-  } = useFetch(() => fetchPopularMovies({ query: "" }), true);
+  } = useFetch(() => fetchPopularMovies({ query: "" }));
   return (
     <View className="flex-1 bg-primary">
       <ImageBackground
@@ -53,7 +53,7 @@ export default function Index() {
               onPress={() => {
                 router.push("/search");
               }}
-              placeholder="Search movies, series, and more"
+              placeholder="Search for a movie"
             />
             <>
               <Text className="text-white mt-5 mb-3 text-lg font-bold">
