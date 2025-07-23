@@ -33,5 +33,5 @@ const options = {
 
 fetch(url, options)
   .then((res) => res.json())
-  .then((json) => console.log(json))
+  .then((json) => {})
   .catch((err) => console.error(err));
