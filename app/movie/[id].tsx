@@ -58,15 +58,24 @@ const MovieDetails = () => {
   return (
     <View className="bg-primary flex-1">
       <ScrollView contentContainerStyle={{ paddingBottom: 80 }}>
-        <View>
+        <View className="relative flex-1">
           {movie.poster_path && (
-            <Image
-              source={{
-                uri: `https://image.tmdb.org/t/p/w500${movie?.poster_path}`,
-              }}
-              className="w-full h-[550px]"
-              resizeMode="stretch"
-            />
+            <View>
+              <Image
+                source={{
+                  uri: `https://image.tmdb.org/t/p/w500${movie?.poster_path}`,
+                }}
+                className="w-full h-[550px]"
+                resizeMode="stretch"
+              />
+              <TouchableOpacity className="absolute bottom-5 right-5 rounded-full size-14 bg-white flex items-center justify-center">
+                <Image
+                  source={icons.play}
+                  className="w-6 h-7 ml-1"
+                  resizeMode="stretch"
+                />
+              </TouchableOpacity>
+            </View>
           )}
           <View className="flex-col items-start justify-center mt-5 px-5">
             <Text className="text-white text-2xl font-bold mb-2">
