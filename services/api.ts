@@ -20,7 +20,6 @@ export const fetchPopularMovies = async ({ query }: { query: string }) => {
     throw new Error(`Error fetching movies: ${response.statusText}`);
   }
   const data = await response.json();
-  console.log("Fetched movies:", data);
   return data.results;
 };
 
